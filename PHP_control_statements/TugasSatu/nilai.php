@@ -1,14 +1,24 @@
-<?
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nilai</title>
+</head>
+<body>
+    <h2>Form Input Nilai</h2>
+    <form action="tampilkan_nilai.php" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
 
-$pageTitle = "Tugas Nomor 1, Halaman Nilai";
-include "../layouts/header.php";
-include "../layouts/footer.php";
+        <label for="nrp">NRP:</label>
+        <input type="text" id="nrp" name="nrp" required><br><br>
 
-?>
+        <label for="nilai">Nilai Angka:</label>
+        <input type="number" id="nilai" name="nilai" required><br><br>
 
-<main class="px-5 py-14 sm:px-6 md:px-9 lg:px-16">
-    <div class="mb-5">
-        <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-        <input type="text" id="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
-    </div>
-</main>
+        <button type="submit">Kirim</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
