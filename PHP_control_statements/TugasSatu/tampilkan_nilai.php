@@ -14,7 +14,6 @@
         $nrp = $_POST["nrp"];
         $nilai = (int) $_POST["nilai"];
 
-        // Konversi nilai angka ke huruf dan predikat
         if ($nilai >= 0 && $nilai <= 40) {
             $nilaiHuruf = "E";
             $predikat = "Sangat Tidak Memuaskan";
