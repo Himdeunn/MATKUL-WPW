@@ -2,7 +2,7 @@
 
 <body>
     <?php
-    $jalan = "Gubeng Kertajaya";
+    $jalan = "Gubeng Kertajaya Indah";
     $noRumah = 29;
     $blok = 4;
     $jumlahPenghuni = 3;
