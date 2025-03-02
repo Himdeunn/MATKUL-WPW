@@ -6,7 +6,7 @@
     <title>Demo Perpindahan</title>
 </head>
 <body>
-    <h2>Demo Perpindahan</h2>
+    <h2>Demo-Perpindahan</h2>
     <form action="inputTampilkanDemo.php" method="post">
         <label>Masukkan angka maksimal perulangan:</label>
         <input type="number" name="angka" required>
