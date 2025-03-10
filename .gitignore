@@ -1,3 +1,6 @@
 *.docx
 *.pdf
 *.tmp
+
+/CoverLaprak/
+/PHP_Syntax_dasar_variabel_operator/documentation_picture/
