@@ -2,7 +2,7 @@
 <body>
 <?php
 $jumlahBarang = 3;
-$harga = 1000;
+$harga = 10000;
 
 echo $pembayaran = $jumlahBarang + $harga;
 echo "<br>";
