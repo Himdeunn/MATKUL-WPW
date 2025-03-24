@@ -11,20 +11,25 @@ This repository was created by Tegar Aprilian Wibowo for the *Web Programming Wo
 ## Contents
 This repository consists of several folders that cover the main topics in PHP programming:
 
-- **PHP_DataManipulation_Regex**
+- **[PHP_DataManipulation_Regex](https://github.com/Himdeunn/MATKUL-WPW/tree/main/PHP_DataManipulation_Regex)**
   - Contains code examples and materials about data manipulation in PHP, including the use of regular expressions (Regular Expressions - Regex).
 
-- **PHP_File_Handling**
+- **[PHP_File_Handling](https://github.com/Himdeunn/MATKUL-WPW/tree/main/PHP_File_Handling)**
   - Discusses how to read, write, and manage files in PHP.
 
-- **PHP_Syntax_dasar_variabel_operator**
+- **[PHP_Syntax_dasar_variabel_operator](https://github.com/Himdeunn/MATKUL-WPW/tree/main/PHP_Syntax_dasar_variabel_operator)**
   - Provides the basics of PHP syntax, variable usage, and operators.
 
-- **PHP_control_statements**
+- **[PHP_control_statements](https://github.com/Himdeunn/MATKUL-WPW/tree/main/PHP_control_statements)**
   - Contains examples and explanations of control structures (control statements) in PHP, such as if-else, switch-case, and loops.
+
+- **[PHP_InternetProgramming_PrakModul2](https://github.com/Himdeunn/MATKUL-WPW/tree/main/PHP_InternetProgramming_PrakModul2)**
+  - Provides knowledge about arrays, modularization, and functions in PHP.
 
 This repository aims to help students understand basic to advanced concepts in web programming using PHP.
 
 ## Sources or Using
 Please explore the folders as needed to understand the concepts discussed. Each folder contains files that can be used as references or exercises in this course.
 
+## License  
+This project is licensed under the [MIT License](./LICENSE).
