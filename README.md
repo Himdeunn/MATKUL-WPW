@@ -26,6 +26,9 @@ This repository consists of several folders that cover the main topics in PHP pr
 - **[PHP_InternetProgramming_PrakModul2](./PHP_InternetProgramming_PrakModul2)**
   - Provides knowledge about arrays, modularization, and functions in PHP.
 
+- **[PHP_SessionControl_Cookies](./PHP_SessionControl_Cookies)**
+  - Provides knowledge about arrays, modularization, and functions in PHP.
+
 This repository aims to help students understand basic to advanced concepts in web programming using PHP.
 
 ## Sources or Using
