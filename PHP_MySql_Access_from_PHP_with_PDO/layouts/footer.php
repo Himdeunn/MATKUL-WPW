@@ -1,4 +1,5 @@
 <!-- includes/footer.php -->
+<!-- includes/footer.php -->
 <footer class="bg-white shadow-md rounded px-8 py-4 mt-8">
     <div class="container mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-center">
