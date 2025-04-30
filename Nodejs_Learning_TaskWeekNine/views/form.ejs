@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+    <form action="/submit" method="POST" class="max-w-2xl mx-auto bg-white p-6 rounded shadow space-y-4">
+        <h1 class="text-xl font-bold mb-4">Form Mahasiswa</h1>
+
+        <input name="nama" placeholder="Nama" class="w-full p-2 border" />
+        <input name="nrp" placeholder="NRP" class="w-full p-2 border" />
+        <input name="kelas" placeholder="Kelas" class="w-full p-2 border" />
+
+        <div class="flex gap-4">
+            <label><input type="radio" name="jenis_kelamin" value="Pria" /> Pria</label>
+            <label><input type="radio" name="jenis_kelamin" value="Wanita" /> Wanita</label>
+        </div>
+
+        <input name="agama" placeholder="Agama" class="w-full p-2 border" />
+
+        <div class="flex gap-2">
+            <input name="tempat_lahir" placeholder="Tempat Lahir" class="w-1/2 p-2 border" />
+            <input name="tanggal_lahir" placeholder="Tanggal Lahir" class="w-1/2 p-2 border" />
+        </div>
+
+        <textarea name="alamat" placeholder="Alamat" class="w-full p-2 border"></textarea>
+
+        <div class="space-y-5">
+            <label>Riwayat Pendidikan:</label>
+            <input name="sd" placeholder="SD" class="w-full p-2 border" />
+            <input name="smp" placeholder="SMP" class="w-full p-2 border" />
+            <input name="sma" placeholder="SMA" class="w-full p-2 border" />
+        </div>
+
+        <input name="email" placeholder="Email" class="w-full p-2 border" />
+        <input name="homepage" placeholder="Homepage" class="w-full p-2 border" />
+        <textarea name="hobby" placeholder="Hobby" class="w-full p-2 border"></textarea>
+
+        <div>
+            <label>Interest:</label><br />
+            <label><input type="checkbox" name="interest" value="Komputer" /> Komputer</label>
+            <label><input type="checkbox" name="interest" value="Sport" /> Sport</label>
+            <label><input type="checkbox" name="interest" value="Travelling" /> Travelling</label>
+            <label><input type="checkbox" name="interest" value="Writing" /> Writing</label>
+            <label><input type="checkbox" name="interest" value="Reading" /> Reading</label>
+        </div>
+
+        <div class="flex justify-between mt-4">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">SIMPAN</button>
+            <button type="reset" class="bg-gray-400 text-white px-4 py-2 rounded">RESET</button>
+        </div>
+    </form>
+</body>
+
+</html>
