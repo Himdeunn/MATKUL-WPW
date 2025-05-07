@@ -1,0 +1,140 @@
+<%- include('../layouts/main', { title: title, body: `
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <form action="/mahasiswa" method="POST" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Nama -->
+          <div class="form-group">
+            <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">1. Nama:</label>
+            <input type="text" id="nama" name="nama" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+    
+          <!-- NRP -->
+          <div class="form-group">
+            <label for="nrp" class="block text-sm font-medium text-gray-700 mb-1">2. NRP:</label>
+            <input type="text" id="nrp" name="nrp" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+    
+          <!-- Kelas -->
+          <div class="form-group">
+            <label for="kelas" class="block text-sm font-medium text-gray-700 mb-1">3. Kelas:</label>
+            <input type="text" id="kelas" name="kelas" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+    
+          <!-- Jenis Kelamin -->
+          <div class="form-group">
+            <label class="block text-sm font-medium text-gray-700 mb-1">4. Jenis Kelamin:</label>
+            <div class="flex space-x-4 mt-1">
+              <div class="flex items-center">
+                <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                <label for="pria" class="ml-2 text-sm text-gray-700">Pria</label>
+              </div>
+              <div class="flex items-center">
+                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                <label for="wanita" class="ml-2 text-sm text-gray-700">Wanita</label>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Agama -->
+          <div class="form-group">
+            <label for="agama" class="block text-sm font-medium text-gray-700 mb-1">5. Agama:</label>
+            <select id="agama" name="agama" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              <option value="">Pilih Agama</option>
+              <option value="Islam">Islam</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Katolik">Katolik</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Buddha">Buddha</option>
+              <option value="Konghucu">Konghucu</option>
+            </select>
+          </div>
+    
+          <!-- Tempat/Tanggal Lahir -->
+          <div class="form-group col-span-full">
+            <label class="block text-sm font-medium text-gray-700 mb-1">6. Tempat/Tanggal Lahir:</label>
+            <div class="flex space-x-2">
+              <input type="text" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" required class="w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              <span class="flex items-center">/</span>
+              <input type="date" id="tanggal_lahir" name="tanggal_lahir" required class="w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+          </div>
+    
+          <!-- Alamat -->
+          <div class="form-group col-span-full">
+            <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">7. Alamat:</label>
+            <textarea id="alamat" name="alamat" rows="3" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+    
+          <!-- Riwayat Pendidikan -->
+          <div class="form-group col-span-full">
+            <label class="block text-sm font-medium text-gray-700 mb-1">8. Riwayat Pendidikan:</label>
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <span class="w-16">a. SD</span>
+                <input type="text" id="sd" name="sd" required class="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div class="flex items-center">
+                <span class="w-16">b. SMP</span>
+                <input type="text" id="smp" name="smp" required class="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div class="flex items-center">
+                <span class="w-16">c. SMA</span>
+                <input type="text" id="sma" name="sma" required class="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              </div>
+            </div>
+          </div>
+    
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">9. Email:</label>
+            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+    
+          <!-- Homepage -->
+          <div class="form-group">
+            <label for="homepage" class="block text-sm font-medium text-gray-700 mb-1">10. Homepage:</label>
+            <input type="url" id="homepage" name="homepage" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+    
+          <!-- Hobby -->
+          <div class="form-group col-span-full">
+            <label for="hobby" class="block text-sm font-medium text-gray-700 mb-1">11. Hobby:</label>
+            <textarea id="hobby" name="hobby" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+    
+          <!-- Interest -->
+          <div class="form-group col-span-full">
+            <label class="block text-sm font-medium text-gray-700 mb-1">12. Interest:</label>
+            <div class="flex flex-wrap gap-4 mt-1">
+              <div class="flex items-center">
+                <input type="checkbox" id="komputer" name="interest" value="Komputer" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="komputer" class="ml-2 text-sm text-gray-700">Komputer</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="sport" name="interest" value="Sport" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="sport" class="ml-2 text-sm text-gray-700">Sport</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="travelling" name="interest" value="Travelling" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="travelling" class="ml-2 text-sm text-gray-700">Travelling</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="writing" name="interest" value="Writing" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="writing" class="ml-2 text-sm text-gray-700">Writing</label>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="reading" name="interest" value="Reading" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="reading" class="ml-2 text-sm text-gray-700">Reading</label>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Tombol Submit dan Reset -->
+        <div class="flex justify-center space-x-4 pt-4">
+          <button type="submit" class="px-6 py-2 bg-blue-600 text-white font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">SIMPAN</button>
+          <button type="reset" class="px-6 py-2 bg-gray-300 text-gray-700 font-medium rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">RESET</button>
+        </div>
+      </form>
+    </div>
+    ` }) %>
