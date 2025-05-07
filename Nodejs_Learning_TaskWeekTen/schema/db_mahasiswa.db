@@ -1,0 +1,41 @@
+-- Membuat database mahasiswa
+CREATE DATABASE IF NOT EXISTS db_mahasiswa;
+USE db_mahasiswa;
+
+-- Membuat tabel mahasiswa
+CREATE TABLE IF NOT EXISTS mahasiswa (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(100) NOT NULL,
+  nrp VARCHAR(20) NOT NULL,
+  kelas VARCHAR(20) NOT NULL,
+  jenis_kelamin ENUM('Pria', 'Wanita') NOT NULL,
+  agama VARCHAR(20) NOT NULL,
+  tempat_lahir VARCHAR(100) NOT NULL,
+  tanggal_lahir DATE NOT NULL,
+  alamat TEXT NOT NULL,
+  sd VARCHAR(100) NOT NULL,
+  smp VARCHAR(100) NOT NULL,
+  sma VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  homepage VARCHAR(255),
+  hobby TEXT,
+  interest VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Menambahkan beberapa data contoh
+INSERT INTO mahasiswa (
+  nama, nrp, kelas, jenis_kelamin, agama, tempat_lahir, tanggal_lahir,
+  alamat, sd, smp, sma, email, homepage, hobby, interest
+) VALUES
+  (
+    'Budi Santoso', '3320001', '3A', 'Pria', 'Islam', 'Jakarta', '2000-05-15',
+    'Jl. Merdeka No. 123, Jakarta', 'SD Negeri 1 Jakarta', 'SMP Negeri 2 Jakarta', 'SMA Negeri 3 Jakarta',
+    'budi@example.com', 'https://budi.example.com', 'Membaca buku dan bermain gitar', 'Komputer,Sport,Reading'
+  ),
+  (
+    'Ani Wijaya', '3320002', '3B', 'Wanita', 'Kristen', 'Surabaya', '2001-03-22',
+    'Jl. Pahlawan No. 45, Surabaya', 'SD Negeri 1 Surabaya', 'SMP Negeri 2 Surabaya', 'SMA Negeri 3 Surabaya',
+    'ani@example.com', 'https://ani.example.com', 'Memasak dan mendengarkan musik', 'Travelling,Writing,Reading'
+  );
