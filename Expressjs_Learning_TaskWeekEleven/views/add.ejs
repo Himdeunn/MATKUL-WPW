@@ -1,0 +1,150 @@
+<%- include('./partials/header', { title: 'Tambah Mahasiswa' }) %>
+
+<div class="bg-white rounded-lg shadow-md p-6">
+  <h2 class="text-xl font-semibold mb-4">Tambah Data Mahasiswa</h2>
+  
+  <form action="/add" method="POST">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Nama -->
+      <div class="flex flex-col">
+        <label for="nama" class="mb-1 font-medium">1. Nama</label>
+        <input type="text" id="nama" name="nama" required 
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <!-- NRP -->
+      <div class="flex flex-col">
+        <label for="nrp" class="mb-1 font-medium">2. NRP</label>
+        <input type="text" id="nrp" name="nrp" required 
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <!-- Kelas -->
+      <div class="flex flex-col">
+        <label for="kelas" class="mb-1 font-medium">3. Kelas</label>
+        <input type="text" id="kelas" name="kelas" required 
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <!-- Jenis Kelamin -->
+      <div class="flex flex-col">
+        <label class="mb-1 font-medium">4. Jenis Kelamin</label>
+        <div class="flex space-x-6 mt-1">
+          <label class="inline-flex items-center">
+            <input type="radio" name="jenis_kelamin" value="Pria" required class="mr-2">
+            <span>Pria</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="jenis_kelamin" value="Wanita" required class="mr-2">
+            <span>Wanita</span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Agama -->
+      <div class="flex flex-col">
+        <label for="agama" class="mb-1 font-medium">5. Agama</label>
+        <input type="text" id="agama" name="agama" value="ISLAM" required 
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <!-- Tempat/Tanggal Lahir -->
+      <div class="flex flex-col">
+        <label class="mb-1 font-medium">6. Tempat/Tanggal Lahir</label>
+        <div class="flex space-x-2">
+          <input type="text" name="tempat_lahir" placeholder="Tempat Lahir" required 
+            class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1">
+          <div class="flex items-center">/</div>
+          <input type="date" name="tanggal_lahir" required 
+            class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Alamat -->
+    <div class="mt-6">
+      <label for="alamat" class="mb-1 font-medium">7. Alamat</label>
+      <textarea id="alamat" name="alamat" required rows="3" 
+        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+    </div>
+    
+    <!-- Riwayat Pendidikan -->
+    <div class="mt-6">
+      <label class="mb-1 font-medium">8. Riwayat Pendidikan</label>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+        <div class="flex items-center">
+          <span class="mr-2">a. SD:</span>
+          <input type="text" name="sd" required 
+            class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1">
+        </div>
+        <div class="flex items-center">
+          <span class="mr-2">b. SMP:</span>
+          <input type="text" name="smp" required 
+            class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1">
+        </div>
+        <div class="flex items-center">
+          <span class="mr-2">c. SMA:</span>
+          <input type="text" name="sma" required 
+            class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Email & Homepage -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div class="flex flex-col">
+        <label for="email" class="mb-1 font-medium">9. Email</label>
+        <input type="email" id="email" name="email" required 
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="homepage" class="mb-1 font-medium">10. Homepage</label>
+        <input type="url" id="homepage" name="homepage" 
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+    </div>
+    
+    <!-- Hobby -->
+    <div class="mt-6">
+      <label for="hobby" class="mb-1 font-medium">11. Hobby</label>
+      <textarea id="hobby" name="hobby" rows="3" 
+        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+    </div>
+    
+    <!-- Interest -->
+    <div class="mt-6">
+      <label class="mb-1 font-medium">12. Interest</label>
+      <div class="flex flex-wrap gap-4 mt-2">
+        <label class="inline-flex items-center">
+          <input type="checkbox" name="interest_komputer" value="1" class="mr-2">
+          <span>Komputer</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="checkbox" name="interest_sport" value="1" class="mr-2">
+          <span>Sport</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="checkbox" name="interest_travelling" value="1" class="mr-2">
+          <span>Travelling</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="checkbox" name="interest_writing" value="1" class="mr-2">
+          <span>Writing</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="checkbox" name="interest_reading" value="1" class="mr-2">
+          <span>Reading</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- Submit Button -->
+    <div class="mt-8 flex space-x-4">
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">SIMPAN</button>
+      <button type="reset" class="bg-gray-400 text-white px-6 py-2 rounded hover:bg-gray-500">RESET</button>
+    </div>
+  </form>
+</div>
+
+<%- include('./partials/footer') %>
